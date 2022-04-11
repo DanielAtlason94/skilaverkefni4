@@ -1,2 +1,1 @@
-# skilaverkefni4
- 
+A simple command-line application.

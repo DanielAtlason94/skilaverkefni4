@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/build" />
+      <excludeFolder url="file://$MODULE_DIR$/.pub" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
+
+1
+calculateSum(){
+  List<int> calculate_sum = [13,56,77,3,45,6,944,1,43,7,40,55,67,93,45,754,33];
+  int sum = 0;
+  for (int i = 0; i < calculate_sum.length; i++){
+    sum += calculate_sum[i];
+  }
+  print(sum);
+}
+
+void main() {
+  calculateSum();
+}
+2
+bool checker(int i) {
+  if (i >= 20 && i <= 80){
+  return true;
+  }
+  else {
+    return false;
+  }
+}
+
+void main() {
+  List<int> calculate_sum = [13,56,77,3,45,6,944,1,43,7,40,55,67,93,45,754,33];
+  for (int i = 0; i < calculate_sum.length; i++){
+    if (checker(calculate_sum[i])){
+      print(calculate_sum[i]);
+    }
+  }
+}
+3
+void main(){
+  List numList = [];
+  int result = 0;
+  while (result is int) {
+    result = int.tryParse(stdin.readLineSync());
+    if(result == ''){
+      result == false;
+    } else {
+      numList.add(result);
+    }
+  }
+  print(numList);
+  var insNum = numList;
+  var largest = insNum[0];
+  var smallest = insNum[0];
+  for (var i = 0; i < insNum.length; i++) {
+    if (insNum[i] > largest) {
+      largest = insNum[i];
+    }
+    if (insNum[i] < smallest) {
+      smallest = insNum[i];
+    }
+  }
+  print("Minnsta talan er: $smallest");
+  print("Stærsta talan er: $largest");
+}
+4
+void main(){
+print('Sláðu inn streng:');
+  List list = [];
+  bool isit = true;
+  while (isit) {
+    String input = stdin.readLineSync(encoding: Encoding.getByName('UTF-8'));
+    if (input == ''){
+      isit = false;
+    } else {
+      list.add(input);
+    }
+  }
+  print(list.reversed);
+}
